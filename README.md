@@ -28,15 +28,15 @@ void parallel_for(int first, int last, int step, parallel_for_fn func)
 
 ```
 void foo() {
-	// 串行
-	....
-   
-   	// 并行parallel_for
+    // 串行
+    ....
+    
+    // 并行parallel_for
     parallel_for(0, 5, 1, [](int i){
         printf("inside for loop, i = %d\n", i);
     });
-
-	// 串行
+    
+    // 串行
     printf("parallel_for done\n");	// 在打印出五次“inside for loop"之前，这句话不应执行
 }
 ```
